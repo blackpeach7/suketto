@@ -1,0 +1,53 @@
+<div class="text-center">
+  <h1>New Schedule</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+
+
+
+        <table class="table">
+            <tr>
+                
+                <td>開始</td>
+                <td><%= @schedule.start.strftime("%Y/%m/%d") %></td>
+            </tr>
+            <tr>
+                <td>種別</td>
+                <td><%= @schedule.kind %></td>
+            </tr>   
+            <tr>
+                <td>場所</td>
+                <td><%= @schedule.place %></td>
+            </tr>
+            
+             <tr>
+                <td>公開設定</td>
+                <% if @schedule.publicflag == 1 %>
+                    <td>公開</td>
+                <% else %>
+                    <td>非公開</td>
+                <% end %>
+            </tr>
+            
+            <tr>
+                <td>詳細</td>
+                <td><%= @schedule.content %></td>
+            </tr>
+            <tr>
+                <td>人数</td>
+                <td><%= @schedule.capacity %></td>
+            </tr>
+            <tr>
+                <td>締切</td>
+                <td><%= @schedule.deadline %></td>
+            </tr>
+         <%# 飲み会,ご飯・お茶,趣味,イベント・パーティー,勉強会,特になし,その他 %>
+        
+        
+ 
+            </table>
+
+  </div>
+</div>

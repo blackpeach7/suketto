@@ -1,5 +1,14 @@
 <div class="center jumbotron">
-  <div class="text-center">
-    <h1>スケット</h1><h2>スケジュールからつながるトモダチづくり</h2>
-  </div>
+
+　<% unless logged_in? %>
+    <div class="text-center">
+      <h1>スケット</h1><p>スケジュールからつながるトモダチづくり</p>
+      <%= link_to '会員登録', signup_path, class: 'btn btn-lg btn-primary' %>
+    </div>
+  <% else %>
+    <h2>説明</h2>
+    <p>新規スケジュール：スケジュール登録ができます。</p>
+    <p>スケジュール一覧：公開されているスケジュールをチェックすることができます。</p>
+    <p>ユーザー一覧：ほかのユーザーを見ることができます。気になるユーザーはフォローしてみましょう。</p> 
+  <% end %>
 </div>

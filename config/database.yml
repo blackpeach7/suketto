@@ -49,6 +49,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: suketto_production
   username: suketto
   password: <%= ENV['SUKETTO_DATABASE_PASSWORD'] %>
