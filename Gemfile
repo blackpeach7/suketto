@@ -56,3 +56,9 @@ gem 'simple_calendar', '~> 2.0'
 group :production do
   gem 'pg', '0.21.0'
 end
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
+end

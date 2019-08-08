@@ -9,6 +9,7 @@ class SchedulesController < ApplicationController
         @schedules = current_user.schedules
     end
     
+    
     def create
       #@sched = Schedules.new(schedule_params)
       @sched =  current_user.schedules.build(schedule_params)
@@ -20,11 +21,13 @@ class SchedulesController < ApplicationController
           render :new
       end    
     end  
+
     
     def destroy 
+        @sched = Schedule.find(params[:id])
         @sched.destroy
         flash[:success] ='スケジュールを削除しました'
-        redeirect_back(fallvack_location: root_path)
+        redirect_back(fallback_location: root_path)
     end
     
     def show

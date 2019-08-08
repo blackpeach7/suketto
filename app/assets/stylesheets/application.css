@@ -9,13 +9,15 @@ footer {
 }
 
 /* navbar */
+
 .navbar {
-  background-color: #fff;
+  background-color: #2F4F4F;
 }
 .navbar-header img {
   margin-top: 5px;
   height: 40px;
 }
+
 
 /* cover */
 .cover {
@@ -56,3 +58,4 @@ footer {
 .wday-0 {
   background-color: pink;
 }
+

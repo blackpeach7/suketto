@@ -13,7 +13,7 @@
         </div>
         <div>
           <% if current_user == schedule.user %>
-            <%= link_to "Delete", schedule, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
+            <%= link_to "Delete", root_path, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
           <% end %>
         </div>
       </div>
